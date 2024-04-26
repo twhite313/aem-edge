@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--aem-edge--tim-white-esri.hlx.page/
+- Live: https://main--aem-edge--tim-white-esri.hlx.live/
 
 ## Installation
 
