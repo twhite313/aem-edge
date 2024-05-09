@@ -530,7 +530,11 @@ function decorateSections(main) {
             .filter((id) => id)
             .map((id) => id.trim());
           id.forEach((id) => section.id = id);
-        } else {
+        } else if (key === 'aria-label')  { 
+         section.setAttribute('aria-label', meta[key]);
+         
+        }
+        else {
           section.dataset[toCamelCase(key)] = meta[key];
         }
       });
