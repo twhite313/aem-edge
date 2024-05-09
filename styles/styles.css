@@ -163,8 +163,9 @@ button:disabled, button:disabled:hover {
   cursor: unset;
 }
 
-:where(a, button).primary {
+:is(a, button).primary {
   font-weight: 900;
+  font-color: red;
 }
 
 a.button.secondary, button.secondary {
