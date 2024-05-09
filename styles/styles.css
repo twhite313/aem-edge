@@ -164,8 +164,7 @@ button:disabled, button:disabled:hover {
 }
 
 a.button.primary, button.primary {
-  font-weight: 900;
-  color: red;
+  font-weight: 700;
 }
 
 a.button.secondary, button.secondary {
