@@ -163,6 +163,10 @@ button:disabled, button:disabled:hover {
   cursor: unset;
 }
 
+:where(a, button).primary {
+  font-weight: 900;
+}
+
 a.button.secondary, button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
