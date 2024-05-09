@@ -524,6 +524,12 @@ function decorateSections(main) {
             .filter((style) => style)
             .map((style) => toClassName(style.trim()));
           styles.forEach((style) => section.classList.add(style));
+        } else if (key === 'id') {
+          const id = meta.id 
+            .split(',')
+            .filter((id) => id)
+            .map((id) => id.trim());
+          id.forEach((id) => section.id = id);
         } else {
           section.dataset[toCamelCase(key)] = meta[key];
         }
