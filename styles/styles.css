@@ -173,6 +173,11 @@ a.button.secondary, button.secondary {
   color: var(--text-color)
 }
 
+a.button.special, button.special {
+  background-color: var(--dark-color);
+  color: var(--background-color);
+} 
+
 main img {
   max-width: 100%;
   width: auto;
