@@ -451,7 +451,7 @@ function decorateButtons(element) {
           up.childNodes.length === 1
           && up.tagName === 'EM'
           && twoup.childNodes.length === 1
-          && twoup.tagName === 'strong'
+          && twoup.tagName === 'STRONG'
         ) {
           a.className = 'button special';
           twoup.classList.add('button-container');
