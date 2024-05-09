@@ -1,3 +1,6 @@
+/**
+ * Import statements for the required modules.
+ */
 import {
   sampleRUM,
   buildBlock,
@@ -13,11 +16,14 @@ import {
   loadCSS,
 } from './aem.js';
 
+/**
+ * An array to store the LCP blocks.
+ */
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
- * Builds hero block and prepends to main in a new section.
- * @param {Element} main The container element
+ * Builds hero block and prepends it to the main container element.
+ * @param {Element} main - The container element.
  */
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
@@ -31,7 +37,7 @@ function buildHeroBlock(main) {
 }
 
 /**
- * load fonts.css and set a session storage flag
+ * Loads fonts.css and sets a session storage flag.
  */
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
@@ -44,7 +50,7 @@ async function loadFonts() {
 
 /**
  * Builds all synthetic blocks in a container element.
- * @param {Element} main The container element
+ * @param {Element} main - The container element.
  */
 function buildAutoBlocks(main) {
   try {
@@ -57,9 +63,8 @@ function buildAutoBlocks(main) {
 
 /**
  * Decorates the main element.
- * @param {Element} main The main element
+ * @param {Element} main - The main element.
  */
-// eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
@@ -71,7 +76,7 @@ export function decorateMain(main) {
 
 /**
  * Loads everything needed to get to LCP.
- * @param {Element} doc The container element
+ * @param {Element} doc - The container element.
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
@@ -95,7 +100,7 @@ async function loadEager(doc) {
 
 /**
  * Loads everything that doesn't need to be delayed.
- * @param {Element} doc The container element
+ * @param {Element} doc - The container element.
  */
 async function loadLazy(doc) {
   const main = doc.querySelector('main');
@@ -121,11 +126,13 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
   // load anything that can be postponed to the latest here
 }
 
+/**
+ * Loads the page by calling the necessary functions in order.
+ */
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
