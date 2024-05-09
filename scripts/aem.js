@@ -531,8 +531,12 @@ function decorateSections(main) {
             .map((id) => id.trim());
           id.forEach((id) => section.id = id);
         } else if (key === 'aria-label')  { 
-         section.setAttribute('aria-label', meta[key]);
-         
+          const ariaLabel = meta['aria-label']
+            .split(',')
+            .filter((ariaLabel) => ariaLabel)
+            .map((ariaLabel) => ariaLabel.trim()); 
+         section.setAttribute('aria-label', ariaLabel);
+
         }
         else {
           section.dataset[toCamelCase(key)] = meta[key];
