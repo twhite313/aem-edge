@@ -1,3 +1,4 @@
+@layer blocks {
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -41,5 +42,6 @@
   color: var(--link-color);
   padding: 0;
   border: none;
-  
+
+}
 }
