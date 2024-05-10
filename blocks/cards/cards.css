@@ -41,7 +41,8 @@
   margin: 4px 0;
   color: var(--link-color);
   padding: 0;
-  border: none;
+  border: unset;
+  border-radius: unset;
 }
 
 }
