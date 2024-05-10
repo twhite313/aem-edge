@@ -47,7 +47,7 @@
   font-size: 1rem;
 }
 
-:where(.cards) a.button:any-link:hover {
+:where(.cards) a.button:is(:hover, :focus) {
   color: var(--link-hover-color);
   text-decoration: underline;   
 }
