@@ -43,6 +43,8 @@
   padding: 0;
   border: unset;
   border-radius: unset;
+  font-weight: initial;
+  font-size: 1rem;
 }
 
 }
