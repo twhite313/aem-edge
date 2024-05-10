@@ -35,13 +35,13 @@
   margin-block: 0;
 }
 
-.cards a.button:any-link {
+:where(.cards) a.button:any-link {
   background:none;
   text-decoration: underline;
   margin: 4px 0;
   color: var(--link-color);
   padding: 0;
   border: none;
-
 }
+
 }
