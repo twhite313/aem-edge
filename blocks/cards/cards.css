@@ -29,3 +29,8 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards .button {
+  background:none;
+  text-decoration: underline;
+}
