@@ -30,7 +30,9 @@
   object-fit: cover;
 }
 
-.cards .button {
+.cards a.button:any-link {
   background:none;
   text-decoration: underline;
+  margin: 4px 0;
+  color: var(--link-color);
 }
