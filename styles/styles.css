@@ -260,10 +260,11 @@
   }
 
   .section::before {
-    content: "This section has, data-title of '" attr(data-title) "' ; id of '" attr(id) "'; and aria-lable of '" attr(aria-label) "'";
+    content: "This section has, data-section-status of '" attr(data-title) "' ; id of '" attr(id) "'; and aria-label of '" attr(aria-label) "'";
     display: block;
-    font-size: var(--heading-font-size-s);
+    font-size: var(--body-font-size-xs);
     font-weight: 700;
     margin-bottom: 16px;
+    border: 1px solid rebeccaPurple;
   }
 } /* end defaults layer */
