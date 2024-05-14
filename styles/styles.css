@@ -260,7 +260,7 @@
   }
 
   .section::before {
-    content: "This section has, data-section-status of '" attr(data-secton-status) "' ; id of '" attr(id) "'; and aria-label of '" attr(aria-label) "'";
+    content: "This section has ID of '" attr(id) "'; and aria-label of '" attr(aria-label) "'";
     display: block;
     font-size: var(--body-font-size-xs);
     font-weight: 700;
