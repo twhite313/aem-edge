@@ -259,7 +259,7 @@
     background-color: var(--dark-color);
   }
 
-  .section::before {
+  .section:hover::before {
     content: "This section has ID of '" attr(id) "'; and aria-label of '" attr(aria-label) "'";
     display: block;
     font-size: var(--body-font-size-xs);
