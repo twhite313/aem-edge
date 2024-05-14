@@ -259,12 +259,12 @@
     background-color: var(--dark-color);
   }
 
-  .section:hover::before {
+  /* .section::before {
     content: "This section has ID of '" attr(id) "'; and aria-label of '" attr(aria-label) "'";
     display: block;
     font-size: var(--body-font-size-xs);
     font-weight: 700;
     margin-bottom: 16px;
     border: 1px solid rebeccaPurple;
-  }
+  } */
 } /* end defaults layer */
