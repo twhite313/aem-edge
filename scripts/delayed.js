@@ -5,5 +5,3 @@ import { sampleRUM } from './aem.js';
 sampleRUM('cwv');
 
 // add more delayed functionality here
-import "@esri/calcite-components/dist/components/calcite-biutton";
-import "@esri/calcite-components/dist/calcite/calcite.css";
