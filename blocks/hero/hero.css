@@ -17,8 +17,10 @@ main .hero-container {
   margin-left: auto;
   margin-right: auto;
   color: #000;
-  background: #d3ded690;
+  background: rgb(211 222 214 /80%);
   padding: 1rem;
+  position: absolute;
+  top: 1rem;
 }
 
 .hero picture {
@@ -27,6 +29,7 @@ main .hero-container {
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;
+  filter: grayscale(67%);
 }
 
 .hero img {
