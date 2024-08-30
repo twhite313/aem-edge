@@ -43,6 +43,33 @@
 
     main.error .error-number text {
       font-family: var(--fixed-font-family);
+
+      .border-rotate {
+        width: 100px;
+        height: 100px;
+        --angle: 340deg;
+        border: solid 8px transparent;
+       
+        border-image: conic-gradient(
+          from var(--angle),
+          var(--calcite-ui-border-1) 0deg 115deg,
+          white 115deg 125deg,
+          var(--calcite-ui-border-2) 125deg 180deg,
+          white 180deg 200deg,
+          var(--calcite-ui-border-3) 200deg 290deg,
+          white 290deg 300deg,
+          var(--calcite-ui-border-input) 300deg 340deg,
+          white 340deg
+          ) 1;
+        animation: rotate 12s infinite linear;
+      }
+      
+      @property --angle {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 0deg;
+      }
+      
     }
   </style>
   <link rel="stylesheet" href="/styles/lazy-styles.css">
@@ -52,10 +79,8 @@
   <header></header>
   <main class="error">
     <div class="section">
+      <div class="border-rotate calcite-mode-dark" style="margin-top: 1em;"></div>
       <h1 class="error-message">Sorry</h1>
-      <!-- <svg viewBox="1 0 38 18" class="error-number">
-        <text x="0" y="17">404</text>
-      </svg> -->
       <p class="button-container">The page you are looking for can not be found right now.</p>
       <p><a href="/" class="button secondary error-button-home">Back to the home</a></p>
     </div>
