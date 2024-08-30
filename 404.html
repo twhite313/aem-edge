@@ -34,9 +34,7 @@
     main.error {
       min-height: calc(100vh - var(--nav-height));
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 10%;
+      align-items: center;
     }
 
     main.error .error-number {
@@ -84,10 +82,12 @@
 <body>
   <header></header>
   <main class="error">
+    <div class="section">
       <div class="border-rotate calcite-mode-dark" style="margin-top: 1em;"></div>
-      <div><h1 class="error-message">You look lost</h1>
+      <h1 class="error-message">You look lost</h1>
       <p class="button-container">Whatever you are looking for isn't here. Sorry 'bout that.</p>
-      <p><a href="/" class="button secondary error-button-home">Try going home again?</a></p></div>
+      <p><a href="/" class="button secondary error-button-home">Try going home again</a></p>
+    </div>
   </main>
   <footer></footer>
 </body>
