@@ -18,13 +18,10 @@ main .hero-container {
   font-size: 100px;
   letter-spacing: -8px;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  block-size: max-content;
   color: #000;
   background: rgb(211 222 214 /80%);
   padding: 1rem;
-  position: absolute;
-  top: 1rem;
 }
 
 .hero picture {
@@ -39,4 +36,8 @@ main .hero-container {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+body.small .hero {
+  padding: 0;
 }
