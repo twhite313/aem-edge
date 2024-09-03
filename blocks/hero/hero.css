@@ -17,7 +17,7 @@
     font-family: Overpass, sans-serif;
     font-weight: 900;
     font-size: 100px;
-    letter-spacing: -6px;
+    letter-spacing: -8px;
     max-width: 1200px;
     block-size: max-content;
     color: #000;
@@ -45,7 +45,8 @@
     text-decoration: none;
   }
 
-  .hero h1 u {
+  .hero h1 .dx {
     color: var(--link-color);
+    letter-spacing: -20px;
   }
 }
