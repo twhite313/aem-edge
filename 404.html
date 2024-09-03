@@ -13,7 +13,7 @@
   <script type="module">
     import { sampleRUM } from '/scripts/aem.js';
 
-    window.addEventListener('load', () => {
+    <!--/* window.addEventListener('load', () => {
       if (document.referrer) {
         const { origin, pathname } = new URL(document.referrer);
         if (origin === window.location.origin) {
@@ -27,10 +27,14 @@
         }
       }
       sampleRUM('404', { source: document.referrer, target: window.location.href });
-    });
+    }); */-->
   </script>
   <link rel="stylesheet" href="/styles/styles.css">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     main.error {
       min-height: calc(100vh - var(--nav-height));
       display: flex;
@@ -42,7 +46,60 @@
     }
 
     main.error .error-number text {
-      font-family: var(--fixed-font-family);
+      font-family: var(--fixed-font-family);      
+    }
+
+    .border-rotate-container {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    
+    :is(.border-rotate-wrapper, 
+    .default-content-wrapper) {
+      margin: 0;
+      padding: 0;
+    }
+
+    .default-content-wrapper {
+      padding: 10px 10px 10px 20px;
+    }
+
+    .default-content-wrapper > * {
+      margin: 0;
+    }
+
+    .border-rotate {
+      width: 100px;
+      height: 100px;
+      padding: 0;
+      margin: 0;
+      --angle: 340deg;
+      border: solid 8px transparent;
+     
+      border-image: conic-gradient(
+        from var(--angle),
+        #555 0deg 115deg,
+        white 115deg 125deg,
+        #4a4a4a 125deg 180deg,
+        white 180deg 200deg,
+        #404040 200deg 290deg,
+        white 290deg 300deg,
+        #757575 300deg 340deg,
+        white 340deg
+        ) 1;
+      animation: rotate 12s infinite linear;
+    }
+    
+    @property --angle {
+      syntax: "<angle>";
+      inherits: false;
+      initial-value: 0deg;
+    }
+
+    @keyframes rotate {
+      from{--angle: 0deg;}
+      to{--angle: 360deg;}
     }
   </style>
   <link rel="stylesheet" href="/styles/lazy-styles.css">
@@ -52,12 +109,13 @@
   <header></header>
   <main class="error">
     <div class="section">
-      <h1 class="error-message">Sorry</h1>
-      <!-- <svg viewBox="1 0 38 18" class="error-number">
-        <text x="0" y="17">404</text>
-      </svg> -->
-      <p class="button-container">The page you are looking for can not be found right now.</p>
-      <p><a href="/" class="button secondary error-button-home">Back to the home</a></p>
+      <div class="border-rotate calcite-mode-dark" style="margin-top: 1em;"></div>
+      <h1 class="error-message">You look lost</h1>
+
+      <p class="button-container">Running around in circles.</p>
+      <p>Whatever you are looking for, it isn't here. Sorry 'bout that.</p>
+
+      <p><a href="/" class="button secondary error-button-home">Try going home again?</a></p>
     </div>
   </main>
   <footer></footer>
