@@ -13,7 +13,7 @@
   <script type="module">
     import { sampleRUM } from '/scripts/aem.js';
 
-    window.addEventListener('load', () => {
+    <!--/* window.addEventListener('load', () => {
       if (document.referrer) {
         const { origin, pathname } = new URL(document.referrer);
         if (origin === window.location.origin) {
@@ -27,10 +27,14 @@
         }
       }
       sampleRUM('404', { source: document.referrer, target: window.location.href });
-    });
+    }); */-->
   </script>
   <link rel="stylesheet" href="/styles/styles.css">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     main.error {
       min-height: calc(100vh - var(--nav-height));
       display: flex;
@@ -45,9 +49,31 @@
       font-family: var(--fixed-font-family);      
     }
 
+    .border-rotate-container {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    
+    :is(.border-rotate-wrapper, 
+    .default-content-wrapper) {
+      margin: 0;
+      padding: 0;
+    }
+
+    .default-content-wrapper {
+      padding: 10px 10px 10px 20px;
+    }
+
+    .default-content-wrapper > * {
+      margin: 0;
+    }
+
     .border-rotate {
       width: 100px;
       height: 100px;
+      padding: 0;
+      margin: 0;
       --angle: 340deg;
       border: solid 8px transparent;
      
@@ -85,8 +111,11 @@
     <div class="section">
       <div class="border-rotate calcite-mode-dark" style="margin-top: 1em;"></div>
       <h1 class="error-message">You look lost</h1>
-      <p class="button-container">Whatever you are looking for isn't here. Sorry 'bout that.</p>
-      <p><a href="/" class="button secondary error-button-home">Try going home again</a></p>
+
+      <p class="button-container">Running around in circles.</p>
+      <p>Whatever you are looking for, it isn't here. Sorry 'bout that.</p>
+
+      <p><a href="/" class="button secondary error-button-home">Try going home again?</a></p>
     </div>
   </main>
   <footer></footer>
