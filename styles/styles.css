@@ -13,12 +13,12 @@
 
 :root {
   /* colors */
-  --link-color: #009af2;
-  --link-hover-color: #3bd8ff;
+  --link-color: rgb(187 52  47);
+  --link-hover-color: rgb(80 121 165);
   --background-color: white;
-  --light-color: #bfbfbf;
-  --dark-color: #9f9f9f;
-  --text-color: black;
+  --light-color: rgb(211 222 214 / 80%);
+  --dark-color: rgb(142 169 149);
+  --text-color: rgb(41 49 50);
 
   /* fonts */
   --body-font-family: 'Avenir Next', roboto-fallback;
@@ -69,6 +69,12 @@
     color: var(--text-color);
     background-color: var(--background-color);
     display: none;
+  }
+
+  *, 
+  *::before, 
+  *::after {
+    box-sizing: border-box;
   }
 
   body.appear {
