@@ -38,7 +38,6 @@
     main.error {
       min-height: calc(100vh - var(--nav-height));
       display: flex;
-      align-items: center;
     }
 
     main.error .error-number {
@@ -76,6 +75,8 @@
       margin: 0;
       --angle: 340deg;
       border: solid 8px transparent;
+      background: url('/icons/favicon.svg') no-repeat center;
+      background-size: 80px;
      
       border-image: conic-gradient(
         from var(--angle),
@@ -110,12 +111,11 @@
   <main class="error">
     <div class="section">
       <div class="border-rotate calcite-mode-dark" style="margin-top: 1em;"></div>
-      <h1 class="error-message">You look lost</h1>
+      <h1 class="error-message">Lost and not yet found</h1>
+      <p class="button-container">Circles you are running, yes?</p>
+      <p>Found nothing have you.</p>
 
-      <p class="button-container">Running around in circles.</p>
-      <p>Whatever you are looking for, it isn't here. Sorry 'bout that.</p>
-
-      <p><a href="/" class="button secondary error-button-home">Try going home again?</a></p>
+      <p><a href="/" class="button secondary error-button-home">Home you go?</a></p>
     </div>
   </main>
   <footer></footer>
