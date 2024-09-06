@@ -102,6 +102,23 @@
       from{--angle: 0deg;}
       to{--angle: 360deg;}
     }
+
+    .error .button-container .button {
+      background-color: rgb(187 52  47);
+      background-image: 
+        radial-gradient(closest-side, rgb(187 52  47 / 80%), rgb(187 52  47)),
+        radial-gradient(closest-side, rgb(80 121 165), rgb(80 121 165 / 80%)); 
+      background-position: center, center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%, 0% 100%;
+      transition: background .5s;
+    }
+
+    .error .button-container .button:is(:hover, :focus) {  
+      background-size: 0% 2px, 100% 2px;
+      background-position: center, center;
+      background-color: rgb(80 121 165);
+    }
   </style>
   <link rel="stylesheet" href="/styles/lazy-styles.css">
 </head>
