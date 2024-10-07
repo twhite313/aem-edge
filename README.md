@@ -1,9 +1,9 @@
-# Your Project's Title...
-Your project's description...
+# Frontend Development DX
+Testing Adobe Edge by building a team site. 
 
 ## Environments
-- Preview: https://main--aem-edge--tim-white-esri.hlx.page/
-- Live: https://main--aem-edge--tim-white-esri.hlx.live/
+- Preview: https://main--aem-edge--timw9114.aem.page/
+- Live: https://main--aem-edge--timw9114.aem.live/
 
 ## Installation
 
