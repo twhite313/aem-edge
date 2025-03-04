@@ -1,5 +1,5 @@
-# Frontend Development DX
-Testing Adobe Edge by building a team site. 
+# Front-end Development DX
+Team website built using Adobe Edge Delivery System
 
 ## Environments
 - Preview: https://main--aem-edge--timw9114.aem.page/
