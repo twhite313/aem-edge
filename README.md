@@ -2,8 +2,8 @@
 Team website built using Adobe Edge Delivery System
 
 ## Environments
-- Preview: https://main--aem-edge--timw313.aem.page/
-- Live: https://main--aem-edge--timw313.aem.live/
+- Preview: https://main--aem-edge--twhite313.aem.page/
+- Live: https://main--aem-edge--twhite313.aem.live/
 
 ## Installation
 
