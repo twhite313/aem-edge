@@ -1,7 +1,7 @@
-# mountpoints:
-#   /:
-#     url: https://content.da.live/twhite313/aem-edge/
-#     type: markup
-
 mountpoints:
-  /: https://drive.google.com/drive/folders/1fdLE0FTjsgwoYN5QmNZ_7UvOm4UL7Bye
+  /:
+    url: https://content.da.live/twhite313/aem-edge/
+    type: markup
+
+# mountpoints:
+#   /: https://drive.google.com/drive/folders/1fdLE0FTjsgwoYN5QmNZ_7UvOm4UL7Bye
